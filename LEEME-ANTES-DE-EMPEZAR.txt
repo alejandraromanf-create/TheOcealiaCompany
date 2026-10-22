@@ -1,0 +1,29 @@
+OCEALIA — SITIO WEB PARA ABRIR EN VISUAL STUDIO CODE
+
+ARCHIVOS
+- index.html: página principal
+- attractions.html: atracciones y servicios
+- careers.html: Tema 1 / Trabaja con nosotros
+- tema2.html, tema3.html, tema4.html, tema5.html: apartados editables
+- styles.css: colores, fuentes, tamaños y diseño
+- script.js: menú, filtros y formularios de demostración
+- assets/logo-ocealia.png: logo adjunto
+
+CÓMO ABRIRLO
+1. Descomprime ocealia-web.zip en una carpeta.
+2. Instala Visual Studio Code si aún no lo tienes.
+3. Abre VS Code > Archivo > Abrir carpeta... y elige la carpeta ocealia-web.
+4. En el panel izquierdo, haz clic en index.html.
+5. Para previsualizarlo, puedes abrir index.html con doble clic en el explorador de archivos. Mejor aún: instala la extensión Live Server, luego clic derecho sobre index.html > Open with Live Server.
+6. Usa el menú superior para navegar entre las páginas.
+
+PARA CAMBIAR TEXTO: abre el archivo HTML correspondiente y busca el texto que quieres cambiar.
+PARA CAMBIAR COLORES: abre styles.css; al principio están las variables --blue, --gold y --cream.
+PARA AÑADIR CONTENIDO A TEMA 2-5: abre tema2.html (o el tema correspondiente) y modifica el contenido que aparece entre <main> y </main>.
+
+IMPORTANTE
+- Las fotos de las atracciones están enlazadas desde la web original y requieren conexión a Internet. El logotipo sí está guardado localmente.
+- Las fuentes web también necesitan Internet; si no cargan, el navegador usa fuentes alternativas.
+- Los formularios son visuales/de demostración y NO envían datos. Para recibir mensajes o candidaturas reales hay que conectarlos a un servicio de formularios o servidor.
+- Los botones de compra son enlaces de demostración, no una pasarela de pago.
+- La web está recreada a partir de las capturas y del texto público que se pudo leer. No es una copia píxel por píxel garantizada: algunas imágenes o detalles del constructor SITE123 pueden variar.
