@@ -151,6 +151,39 @@
     </form>
   </section>
 
+
+  <section class="visit-planner" id="calendario">
+    <div class="visit-heading"><div class="eyebrow">Organiza tu día mágico</div><h2>Elige cuándo venir a Ocealia</h2><p>Consulta el calendario, selecciona una fecha y revisa el horario previsto de apertura antes de preparar tu visita.</p></div>
+    <div class="planner-grid">
+      <div class="calendar-card">
+        <div class="calendar-top"><h3>Calendario de apertura</h3><div class="month-controls"><button type="button" id="prevMonth" aria-label="Mes anterior">‹</button><strong id="monthLabel"></strong><button type="button" id="nextMonth" aria-label="Mes siguiente">›</button></div></div>
+        <div class="calendar-grid" id="calendarGrid" aria-label="Calendario de selección de fecha"></div>
+        <div class="calendar-legend"><span><i class="legend-dot"></i>Día con horario</span><span><i class="legend-muted"></i>Cerrado</span><span><i class="legend-square"></i>Fecha seleccionada</span></div>
+      </div>
+      <aside class="hours-card" aria-live="polite"><h3>Horario del día</h3><p class="selected-date" id="selectedDateLabel">Selecciona una fecha en el calendario</p><div class="hours-time" id="hoursTime">—</div><span class="status-pill" id="dayStatus">Sin fecha seleccionada</span><div class="hours-line"><strong>Horario orientativo</strong><span id="hoursDetail">Elige un día para consultar la previsión de apertura.</span></div><div class="hours-line"><strong>Recomendación</strong><span id="hoursTip">Llega con antelación para organizar tu entrada y aprovechar el día.</span></div><p class="hours-disclaimer">Calendario de demostración para el proyecto. Los días y horarios definitivos deberán actualizarse con el calendario oficial de Ocealia.</p></aside>
+    </div>
+  </section>
+
+  <section class="map-section" id="mapa-parque">
+    <div class="visit-heading"><div class="eyebrow">Explora antes de llegar</div><h2>Descubre el mapa de Ocealia</h2><p>Selecciona los marcadores del plano para conocer las atracciones, zonas y servicios del parque. El mapa es esquemático y no representa distancias reales.</p></div>
+    <div class="map-layout">
+      <div class="park-map-card"><h3>Plano interactivo</h3><div class="map-toolbar" id="mapFilters"><button type="button" class="map-filter active" data-filter="all">Todo</button><button type="button" class="map-filter" data-filter="acuática">Acuáticas</button><button type="button" class="map-filter" data-filter="terrestre">Terrestres</button><button type="button" class="map-filter" data-filter="infantil">Infantiles</button><button type="button" class="map-filter" data-filter="servicio">Zonas y servicios</button></div>
+        <div class="map-canvas" id="parkMap" aria-label="Plano esquemático interactivo de Ocealia">
+          <svg viewBox="0 0 700 500" preserveAspectRatio="none" aria-hidden="true"><defs><pattern id="mapDots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#b6dcd4"/></pattern></defs><rect width="700" height="500" fill="#dff1ed"/><rect width="700" height="500" fill="url(#mapDots)"/><path d="M-20 80 C130 20 160 160 280 120 S480 20 720 105 L720 180 C550 125 450 220 300 190 S90 110 -20 175Z" fill="#b6e1e8"/><path d="M-20 365 C120 295 210 410 340 355 S550 300 720 370 L720 500 -20 500Z" fill="#b6e1e8"/><path d="M45 250 C150 200 230 280 330 240 S510 190 650 250" fill="none" stroke="#fff8e8" stroke-width="26" stroke-linecap="round"/><path d="M330 40 C300 150 390 210 350 300 S390 410 470 465" fill="none" stroke="#fff8e8" stroke-width="24" stroke-linecap="round"/><path d="M60 440 Q180 350 270 390 T460 380 T650 430" fill="none" stroke="#d8c89f" stroke-width="9" stroke-dasharray="9 9"/><g fill="#9bcdb7" opacity=".8"><circle cx="90" cy="205" r="32"/><circle cx="130" cy="220" r="19"/><circle cx="570" cy="175" r="35"/><circle cx="610" cy="200" r="22"/><circle cx="170" cy="330" r="26"/><circle cx="520" cy="330" r="27"/><circle cx="250" cy="80" r="20"/></g><g fill="#fff" opacity=".8" font-family="Arial" font-size="14" font-weight="bold"><text x="20" y="35">REINO ACUÁTICO</text><text x="490" y="35">REINO TERRESTRE</text><text x="24" y="480">ZONA DE AVENTURA</text></g></svg>
+        </div><div class="map-key"><span><i class="key-blue"></i>Atracciones</span><span><i class="key-gold"></i>Servicios y zonas</span></div><p class="map-caption">Plano conceptual de orientación. La distribución, ubicación y distancias son ilustrativas.</p>
+      </div>
+      <aside class="map-info" id="mapInfo" aria-live="polite"><div class="info-icon" id="mapInfoIcon">🧭</div><span class="info-category" id="mapInfoCategory">GUÍA DEL PARQUE</span><h4 id="mapInfoTitle">Selecciona un lugar</h4><p id="mapInfoText">Pulsa cualquiera de los marcadores del mapa para descubrir qué puedes encontrar en esa zona de Ocealia.</p><p class="map-hint" id="mapInfoExtra">Puedes filtrar el plano por tipo de experiencia.</p></aside>
+    </div>
+  </section>
+
+  <section class="directions" id="como-llegar">
+    <div class="visit-heading"><div class="eyebrow">El viaje también forma parte de la aventura</div><h2>¿Cómo llegar a Ocealia?</h2><p>Prepara tu ruta antes de salir y consulta las opciones de desplazamiento disponibles en tu zona.</p></div>
+    <div class="directions-grid">
+      <article class="directions-card"><h3>Encuentra la ruta</h3><p>Abre el mapa para buscar «Ocealia Parque Temático» y calcular cómo llegar desde tu ubicación. Cuando la dirección definitiva del parque esté publicada, conviene sustituir la búsqueda por su dirección exacta.</p><div class="direction-actions"><a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&destination=Ocealia%20Parque%20Tem%C3%A1tico" target="_blank" rel="noopener">Abrir ruta en Google Maps ↗</a><a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Ocealia%20Parque%20Tem%C3%A1tico" target="_blank" rel="noopener">Buscar el parque ↗</a></div><p class="direction-note">La ubicación de Ocealia aún no aparece especificada en la información de la web. Los enlaces permiten buscar el nombre, pero no garantizan que exista una ubicación geográfica registrada.</p></article>
+      <article class="directions-card"><h3>Opciones para organizar el desplazamiento</h3><div class="direction-list"><div class="direction-item"><span>🚗</span><div><strong>En coche</strong><small>Introduce el destino en tu navegador cuando se confirme la dirección oficial. Comprueba previamente las opciones de aparcamiento.</small></div></div><div class="direction-item"><span>🚌</span><div><strong>En transporte público</strong><small>Consulta las líneas de autobús o tren que conecten con la ubicación definitiva del parque.</small></div></div><div class="direction-item"><span>🚕</span><div><strong>Taxi o vehículo VTC</strong><small>Comparte la dirección oficial del parque con el conductor antes de iniciar el trayecto.</small></div></div><div class="direction-item"><span>🧭</span><div><strong>Antes de salir</strong><small>Revisa el horario de apertura seleccionado y calcula tiempo adicional para llegar, aparcar y acceder al recinto.</small></div></div></div></article>
+    </div>
+  </section>
+
   <section class="ticket-extras">
     <article class="ticket-extra"><div class="eyebrow">📅 Planifica</div><h3>Planifica con tiempo</h3><p>Consulta el calendario y escoge el día que mejor se adapte a tu visita.</p></article>
     <article class="ticket-extra"><div class="eyebrow">💧 Disfruta</div><h3>Un parque para todos</h3><p>Encuentra opciones para familias, niños y visitantes que buscan una experiencia especial.</p></article>
@@ -195,6 +228,77 @@ form.addEventListener('submit',event=>{
  confirmation.style.display='block';
 });
 updateTotal();
+</script>
+<script>
+// Calendario interactivo de ejemplo: días cerrados los martes; horario variable por día.
+(function(){
+ const grid=document.getElementById('calendarGrid'); if(!grid)return;
+ const monthLabel=document.getElementById('monthLabel');
+ const selectedDateLabel=document.getElementById('selectedDateLabel');
+ const hoursTime=document.getElementById('hoursTime'),dayStatus=document.getElementById('dayStatus');
+ const hoursDetail=document.getElementById('hoursDetail'),hoursTip=document.getElementById('hoursTip');
+ const today=new Date();today.setHours(0,0,0,0);
+ let view=new Date(today.getFullYear(),today.getMonth(),1), selected=null;
+ const fmt=new Intl.DateTimeFormat('es-ES',{day:'numeric',month:'long',year:'numeric'});
+ function isClosed(date){return date.getDay()===2;}
+ function render(){
+  monthLabel.textContent=new Intl.DateTimeFormat('es-ES',{month:'long',year:'numeric'}).format(view);
+  grid.innerHTML='';['L','M','X','J','V','S','D'].forEach(d=>{const el=document.createElement('div');el.className='calendar-weekday';el.textContent=d;grid.appendChild(el)});
+  const first=new Date(view.getFullYear(),view.getMonth(),1),offset=(first.getDay()+6)%7,days=new Date(view.getFullYear(),view.getMonth()+1,0).getDate();
+  for(let i=0;i<offset;i++){const blank=document.createElement('div');grid.appendChild(blank)}
+  for(let n=1;n<=days;n++){
+   const date=new Date(view.getFullYear(),view.getMonth(),n);const b=document.createElement('button');b.type='button';b.className='calendar-day';b.textContent=n;
+   const closed=isClosed(date);if(closed){b.classList.add('closed');b.disabled=true;b.setAttribute('aria-label',`${fmt.format(date)}, cerrado`)}else{b.setAttribute('aria-label',`${fmt.format(date)}, abierto`);const dot=document.createElement('i');dot.className='dot';b.appendChild(dot);b.addEventListener('click',()=>{selected=date;render();showDate(date)})}
+   if(date.getTime()===today.getTime())b.classList.add('today');if(selected&&date.getTime()===selected.getTime())b.classList.add('selected');grid.appendChild(b);
+  }
+ }
+ function showDate(date){const day=date.getDay(),weekend=day===0||day===6;const open=weekend?'10:00':'10:00',close=weekend?'21:00':'19:00';
+  selectedDateLabel.textContent=fmt.format(date);hoursTime.textContent=`${open} – ${close}`;dayStatus.textContent='Abierto · horario orientativo';dayStatus.className='status-pill';
+  hoursDetail.textContent=weekend?'Horario ampliado de fin de semana.':'Horario habitual de día laborable.';
+  hoursTip.textContent=weekend?'Se recomienda llegar antes de las horas de mayor afluencia.':'Llega con antelación para organizar tu entrada y aprovechar el día.';
+  const input=document.getElementById('visitDate');if(input){input.value=[date.getFullYear(),String(date.getMonth()+1).padStart(2,'0'),String(date.getDate()).padStart(2,'0')].join('-')}
+ }
+ document.getElementById('prevMonth').addEventListener('click',()=>{view=new Date(view.getFullYear(),view.getMonth()-1,1);render()});
+ document.getElementById('nextMonth').addEventListener('click',()=>{view=new Date(view.getFullYear(),view.getMonth()+1,1);render()});
+ const dateInput=document.getElementById('visitDate');if(dateInput){dateInput.addEventListener('change',()=>{if(!dateInput.value)return;const d=new Date(dateInput.value+'T12:00:00');if(!isClosed(d)){selected=d;view=new Date(d.getFullYear(),d.getMonth(),1);render();showDate(d)}else{dateInput.value='';selectedDateLabel.textContent='Los martes figuran como día de cierre en este calendario de ejemplo.';hoursTime.textContent='Cerrado';dayStatus.textContent='Día de cierre';dayStatus.className='status-pill closed-pill';hoursDetail.textContent='Selecciona otro día para consultar el horario.'}})}
+ render();let firstOpen=new Date(today);while(isClosed(firstOpen))firstOpen.setDate(firstOpen.getDate()+1);selected=firstOpen;view=new Date(firstOpen.getFullYear(),firstOpen.getMonth(),1);render();showDate(firstOpen);
+})();
+
+// Plano esquemático: nombres y descripciones basados en el apartado attractions.html.
+(function(){
+ const places=[
+  ['Aqua Blaze Slides','Acuática','Toboganes de curvas, túneles y descensos vertiginosos donde la velocidad y la fantasía se encuentran.','🌊',18,22,'Extrema'],
+  ['Buccaneer Bay','Acuática','Una antigua bahía de piratas con barcos, ruinas y elementos marinos para una aventura imaginativa.','🏴‍☠️',32,15,'Moderada'],
+  ['Children’s Reef','Infantil','Un pequeño arrecife con juegos acuáticos, recorridos suaves y fantasía marina para los más pequeños.','🐚',15,48,'Infantil'],
+  ['El Abismo de Poseidón','Acuática','Cae en picado por un tubo casi vertical hacia las profundidades marinas en nuestra atracción más intensa.','🔱',42,25,'Extrema'],
+  ['Lost Atlantis Waterland','Acuática','Ruinas de una civilización submarina legendaria, templos, cascadas y recorridos misteriosos.','🏛️',55,18,'Extrema'],
+  ['Mermaid Grotto','Terrestre','Una misteriosa gruta con vegetación marina, rocas mágicas y rincones secretos.','🧜',62,38,'Moderada'],
+  ['Mermaid Theatre','Terrestre','Sirenas, criaturas marinas y leyendas con música, personajes fantásticos y efectos visuales.','🎭',78,47,'Familiar'],
+  ['Mystical Ocean Castle','Terrestre','Un castillo mágico inspirado en antiguos reinos submarinos, perfecto para pasear y hacer fotos.','🏰',84,18,'Familiar'],
+  ['Poseidon’s Revenge','Acuática','Enormes curvas, descensos y giros en una auténtica batalla contra las fuerzas del océano.','⚡',26,68,'Extrema'],
+  ['Serpent’s Spiral','Acuática','Un tobogán en espiral con curvas y descensos hasta terminar en las aguas de Ocealia.','🐉',43,78,'Extrema'],
+  ['The Kraken Splash','Acuática','Enfréntate al legendario Kraken en una aventura llena de agua, efectos especiales y sorpresas.','🐙',59,68,'Extrema'],
+  ['The Mermaid River','Acuática','Un recorrido tranquilo entre paisajes submarinos, plantas, rocas y rincones secretos.','🛶',70,82,'Relax'],
+  ['Tiny Tides','Infantil','Zona de juegos acuáticos con chorros, recorridos suaves y aventuras inspiradas en el fondo marino.','🫧',14,80,'Infantil'],
+  ['Torre del Dragón','Terrestre','Siente la furia del dragón en una montaña rusa que atraviesa túneles oscuros a gran velocidad.','🐲',88,68,'Extrema'],
+  ['Valle de las Hadas','Infantil','Un bosque encantado con setas gigantes, laberintos mágicos y juegos suaves para explorar.','🧚',90,86,'Infantil'],
+  ['Wave Pool','Acuática','Una piscina de olas inspiradas en las corrientes del océano, para descansar y divertirse.','🏖️',31,88,'Familiar'],
+  ['Wave Rider','Acuática','Una experiencia inspirada en las corrientes mágicas del océano, llena de movimiento.','🏄',48,48,'Familiar'],
+  ['Aqua Drinks','Servicio','Un punto de descanso perfecto para refrescarse entre aventuras. Ofrece bebidas inspiradas en el mundo submarino.','🥤',12,35,'Restauración'],
+  ['Aqua Snacks','Servicio','Un espacio para recuperar energías con aperitivos y comidas rápidas para toda la familia.','🍟',49,12,'Restauración'],
+  ['First Aid','Servicio','Punto de atención sanitaria destinado a ofrecer asistencia a los visitantes cuando sea necesario.','✚',73,28,'Servicios'],
+  ['Guppy Cove Café','Servicio','Un acogedor restaurante inspirado en una pequeña cala marina.','☕',67,53,'Restauración'],
+  ['Ocealia Gateway','Servicio','La aventura comienza en la gran entrada que conecta nuestro mundo con el reino mágico de Ocealia.','🚪',50,94,'Entrada'],
+  ['Restrooms','Servicio','Zonas de aseos distribuidas por el parque para facilitar una visita cómoda.','🚻',26,37,'Servicios']
+ ];
+ const map=document.getElementById('parkMap'),infoTitle=document.getElementById('mapInfoTitle'),infoText=document.getElementById('mapInfoText'),infoIcon=document.getElementById('mapInfoIcon'),infoCat=document.getElementById('mapInfoCategory'),infoExtra=document.getElementById('mapInfoExtra');if(!map)return;
+ const markers=[];
+ function selectPlace(place,button){markers.forEach(m=>m.classList.toggle('active',m===button));infoIcon.textContent=place[3];infoCat.textContent=place[1]==='Servicio'?`ZONA · ${place[6].toUpperCase()}`:`${place[1].toUpperCase()} · ${place[6].toUpperCase()}`;infoTitle.textContent=place[0];infoText.textContent=place[2];infoExtra.textContent=place[1]==='Servicio'?'Servicio del parque incluido en el plano conceptual.':'Atracción incluida en el catálogo de Atracciones de Ocealia.';}
+ places.forEach((place,i)=>{const b=document.createElement('button');b.type='button';b.className='map-marker'+(place[1]==='Servicio'?' service':'');b.style.left=place[4]+'%';b.style.top=place[5]+'%';b.textContent=place[3];b.title=place[0];b.setAttribute('aria-label',`Ver información de ${place[0]}`);b.dataset.category=place[1].toLowerCase();b.addEventListener('click',()=>selectPlace(place,b));map.appendChild(b);markers.push(b);});
+ document.querySelectorAll('.map-filter').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.map-filter').forEach(x=>x.classList.toggle('active',x===button));const f=button.dataset.filter;markers.forEach((m,i)=>{const c=places[i][1].toLowerCase();m.hidden=!(f==='all'||(f==='servicio'&&c==='servicio')||c===f)})}));
+ const first=markers[0];if(first)selectPlace(places[0],first);
+})();
+
 </script>
 </body>
 </html>
