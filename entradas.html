@@ -263,7 +263,7 @@ updateTotal();
   }
  }
  function showDate(date){const day=date.getDay(),weekend=day===0||day===6;const open=weekend?'10:00':'10:00',close=weekend?'21:00':'19:00';
-  selectedDateLabel.textContent=fmt.format(date);hoursTime.textContent=`${open} – ${close}`;dayStatus.textContent='Abierto · horario orientativo';dayStatus.className='status-pill';
+  selectedDateLabel.textContent=fmt.format(date);hoursTime.textContent=`${open} – ${close}`;dayStatus.textContent='Abierto;dayStatus.className='status-pill';
   hoursDetail.textContent=weekend?'Horario ampliado de fin de semana.':'Horario habitual de día laborable.';
   hoursTip.textContent=weekend?'Se recomienda llegar antes de las horas de mayor afluencia.':'Llega con antelación para organizar tu entrada y aprovechar el día.';
   const input=document.getElementById('visitDate');if(input){input.value=[date.getFullYear(),String(date.getMonth()+1).padStart(2,'0'),String(date.getDate()).padStart(2,'0')].join('-')}
